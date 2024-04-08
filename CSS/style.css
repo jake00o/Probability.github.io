@@ -1,0 +1,54 @@
+body {
+    background: url('../Images/1.jpg');
+    background-size: cover;
+ }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.top-left-button {
+    position: absolute;
+    top: 10px; /* Adjust this value to set the distance from the top */
+    left: 10px; /* Adjust this value to set the distance from the left */
+    background-color: #ba1010;
+    color: gold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid green;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.top-left-button:hover {
+    background-color: blueviolet;
+}
+
+.btn-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    background-color: #ba1010;
+    color: gold;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 15px 32px;
+    border: 1px solid green;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: blueviolet;
+}
+
