@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino</title>
+    <link rel="stylesheet" href="../CSS/style4.css">
+</head>
+    <body>
+        <h1>ROULETTE</h1>
+        <div id="wheel">
+            <div class="prize" id="prize1"></div>
+            <div class="prize" id="prize2"></div>
+            <div class="prize" id="prize3"></div>
+            <div class="prize" id="prize4"></div>
+            <div class="prize" id="prize5"></div>
+        </div>
+    <button class="button" onclick="spinWheel()">Spin</button>
+    <div id="result"></div>
+      <script>
+        function spinWheel() {
+          // Reset visibility of all prizes
+          document.querySelectorAll('.prize').forEach(prize => prize.style.display = 'block');
+    
+          // Get a random prize
+          const randomPrizeIndex = Math.floor(Math.random() * 5) + 1;
+          const randomPrize = document.getElementById(`prize${randomPrizeIndex}`);
+    
+          // Display the chosen prize
+          document.getElementById('result').innerHTML;
+          
+          // Hide all other prizes
+          document.querySelectorAll('.prize').forEach(prize => {
+            if (prize !== randomPrize) {
+              prize.style.display = 'none';
+            }
+          });
+        }
+      </script>
+</body>
+</html>
