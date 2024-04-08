@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Rolling Game</title>
+  <link rel="stylesheet" href="../CSS/style5.css">
+</head>
+<body>
+  <h1>POKER</h1>
+  <div id="player1">
+    <h2>Player 1</h2>
+    <p>Total Score: <span id="player1Score">0</span></p>
+    <p>Rolls: <span id="player1Rolls">0</span></p>
+    <p>Last Rolls: <span id="player1LastRolls"></span></p>
+    <button class = "button" onclick="rollDice('player1')">Roll Dice</button>
+  </div>
+  <div id="player2">
+    <h2>Player 2</h2>
+    <p>Total Score: <span id="player2Score">0</span></p>
+    <p>Rolls: <span id="player2Rolls">0</span></p>
+    <p>Last Rolls: <span id="player2LastRolls"></span></p>
+    <button class = "button2" onclick="rollDice('player2')">Roll Dice</button>
+  </div>
+  <div id="refresh">
+    <button class = "button3" onclick="refreshGame()" disabled>Refresh</button>
+  </div>
+
+  <script>
+    let player1Rolls = 0;
+    let player2Rolls = 0;
+
+    function rollDice(player) {
+      const roll = Math.floor(Math.random() * 6) + 1; // Random number between 1 and 6
+      const totalScoreElement = document.getElementById(player + 'Score');
+      const rollsCountElement = document.getElementById(player + 'Rolls');
+      const lastRollsElement = document.getElementById(player + 'LastRolls');
+      const rollButton = document.querySelector(`#${player} button`);
+
+      // Increment rolls count
+      if (player === 'player1') {
+        player1Rolls++;
+      } else {
+        player2Rolls++;
+      }
+      
+      // Display result of the roll
+      // Check if lastRollsElement is empty to decide whether to prepend a comma
+      const rollText = lastRollsElement.textContent === '' ? roll : ', ' + roll;
+      lastRollsElement.textContent += rollText;
+
+      // Add the roll score to total score
+      totalScoreElement.textContent = parseInt(totalScoreElement.textContent) + roll;
+
+      // Disable button after 5 rolls
+      if ((player === 'player1' && player1Rolls === 5) || (player === 'player2' && player2Rolls === 5)) {
+        rollButton.disabled = true;
+        enableRefreshButton();
+        checkForWinner();
+      }
+    }
+
+    function enableRefreshButton() {
+      const refreshButton = document.getElementById('refresh').querySelector('button');
+      if (player1Rolls === 5 && player2Rolls === 5) {
+        refreshButton.disabled = false;
+      }
+    }
+
+    function refreshGame() {
+      location.reload();
+    }
+
+    function checkForWinner() {
+      const player1Score = parseInt(document.getElementById('player1Score').textContent);
+      const player2Score = parseInt(document.getElementById('player2Score').textContent);
+
+      if (player1Score > player2Score) {
+        alert('Player 1 wins!');
+      } else if (player1Score < player2Score) {
+        alert('Player 2 wins!');
+      } else {
+        alert('It\'s a tie!');
+      }
+    }
+  </script>
+</body>
+</html>
