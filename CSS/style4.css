@@ -27,11 +27,11 @@ body {
     background-repeat: no-repeat; /* Prevent image repetition */
     border-radius: 50%; /* Ensure the image is displayed within a circle */
   }
-  #prize1 { background-image: url('../Images/p1.jpg'); }
-  #prize2 { background-image: url('../Images/p2.jfif'); }
-  #prize3 { background-image: url('../Images/p3.webp'); }
-  #prize4 { background-image: url('../Images/p4.png'); }
-  #prize5 { background-image: url('../Images/p5.jpg'); }
+  #prize1 { background-image: url('../Images/1a.png'); }
+  #prize2 { background-image: url('../Images/2b.png'); }
+  #prize3 { background-image: url('../Images/3c.png'); }
+  #prize4 { background-image: url('../Images/4d.png'); }
+  #prize5 { background-image: url('../Images/5e.png'); }
   #result {
     margin-top: 20px;
   }
