@@ -1,0 +1,86 @@
+body {
+    background: url('../Images/6.jpg');
+    background-size: cover;
+ }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.centered-button {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ba1010;
+    color: gold;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.centered-button:hover {
+    background-color: blueviolet;
+}
+
+h1 {
+    position: absolute;
+    top: 75%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+h1 {
+    color: gold; /* Adjust text color */
+    font-size: 36px; /* Adjust font size */
+    /* Add any additional styling as needed */
+}
+
+p {
+    position: absolute;
+    top: 80%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+p {
+    color: gold; /* Adjust text color */
+    font-size: 36px; /* Adjust font size */
+    /* Add any additional styling as needed */
+}
+
+.button {
+    position: absolute;
+    top: 10px; /* Adjust this value to set the distance from the top */
+    left: 10px; /* Adjust this value to set the distance from the left */
+    background-color: #ba1010;
+    color: gold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid green;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button:hover {
+    background-color: blueviolet;
+}
+

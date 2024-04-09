@@ -1,0 +1,53 @@
+body {
+    background: url('../Images/5.jpg');
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: center;
+    color: gold;
+  }
+
+.button {
+    background-color: #ba1010;
+    color: gold;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button:hover {
+    background-color: blueviolet;
+}
+
+.button2 {
+    background-color: #ba1010;
+    color: gold;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button2:hover {
+    background-color: blueviolet;
+}
+
+.button3 {
+    background-color: #ba1010;
+    color: gold;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button3:hover {
+    background-color: blueviolet;
+}
